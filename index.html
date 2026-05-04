@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Planejamento Financeiro — Thácio & Byanca 2026</title>
+<style>
+:root{
+  --az:#1e3a5f;--az2:#2563eb;--az-bg:#eff6ff;
+  --vd:#15803d;--vd2:#22c55e;--vd-bg:#f0fdf4;
+  --vm:#dc2626;--vm-bg:#fef2f2;
+  --am:#d97706;--am-bg:#fffbeb;
+  --rx:#7c3aed;--rx-bg:#f5f3ff;
+  --cz:#64748b;--cz-bg:#f8fafc;
+  --bd:#e2e8f0;
+  --sh:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.05);
+  --rd:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f1f5f9;color:#1e293b;font-size:15px;}
+.hdr{background:linear-gradient(135deg,#0f2744,#1e3a5f 50%,#15803d);color:#fff;padding:22px 18px 16px;text-align:center;}
+.hdr h1{font-size:1.5rem;font-weight:800;}
+.hdr p{margin-top:3px;opacity:.8;font-size:.85rem;}
+.bdgs{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:9px;}
+.bdg{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:3px 11px;font-size:.73rem;font-weight:600;}
+.nav-m{display:flex;background:#0f2744;overflow-x:auto;border-bottom:3px solid var(--vd2);padding:0 6px;}
+.nav-m button{background:none;border:none;color:rgba(255,255,255,.5);padding:10px 13px;font-size:.8rem;font-weight:700;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all .15s;}
+.nav-m button:hover{color:#fff;}
+.nav-m button.on{color:#fff;border-bottom-color:var(--vd2);}
+.nav-s{display:flex;background:#fff;border-bottom:1px solid var(--bd);overflow-x:auto;padding:0 10px;position:sticky;top:0;z-index:10;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.nav-s button{background:none;border:none;color:var(--cz);padding:9px 12px;font-size:.78rem;font-weight:600;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;}
+.nav-s button:hover{color:var(--az2);}
+.nav-s button.on{color:var(--az2);border-bottom-color:var(--az2);}
+main{max-width:980px;margin:0 auto;padding:18px 12px 80px;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:14px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;}
+@media(max-width:640px){.g2,.g3{grid-template-columns:1fr 1fr;}}
+@media(max-width:380px){.g2,.g3{grid-template-columns:1fr;}}
+.card{background:#fff;border-radius:var(--rd);box-shadow:var(--sh);padding:15px;}
+.card.az{border-top:4px solid var(--az2);}
+.card.vd{border-top:4px solid var(--vd2);}
+.card.vm{border-top:4px solid var(--vm);}
+.card.am{border-top:4px solid var(--am);}
+.card.rx{border-top:4px solid var(--rx);}
+.ct{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--cz);margin-bottom:5px;}
+.cv{font-size:1.55rem;font-weight:800;line-height:1.1;}
+.cs{font-size:.74rem;color:var(--cz);margin-top:3px;line-height:1.4;}
+.al{border-radius:var(--rd);padding:11px 14px;margin-bottom:13px;display:flex;gap:9px;align-items:flex-start;font-size:.82rem;}
+.al.info{background:var(--az-bg);border-left:4px solid var(--az2);}
+.al.ok{background:var(--vd-bg);border-left:4px solid var(--vd2);}
+.al.warn{background:var(--am-bg);border-left:4px solid var(--am);}
+.al.crit{background:var(--vm-bg);border-left:4px solid var(--vm);}
+.al-i{font-size:1rem;flex-shrink:0;margin-top:1px;}
+.al b{display:block;font-size:.84rem;margin-bottom:2px;}
+.tw{background:#fff;border-radius:var(--rd);box-shadow:var(--sh);overflow:hidden;margin-bottom:14px;}
+table{width:100%;border-collapse:collapse;font-size:.81rem;}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:8px 11px;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:var(--cz);border-bottom:1px solid var(--bd);}
+td{padding:8px 11px;border-bottom:1px solid #f1f5f9;vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#fafbff;}
+.r{text-align:right;}.b{font-weight:700;}.mu{color:#94a3b8;font-size:.74rem;}
+.tag{display:inline-block;border-radius:5px;padding:2px 7px;font-size:.69rem;font-weight:700;}
+.tag.v{background:var(--vd-bg);color:#166534;}
+.tag.r{background:var(--vm-bg);color:var(--vm);}
+.tag.a{background:var(--am-bg);color:#92400e;}
+.tag.az{background:var(--az-bg);color:#1e40af;}
+.tag.rx{background:var(--rx-bg);color:#5b21b6;}
+.tag.c{background:#f1f5f9;color:#475569;}
+.stit{font-size:1rem;font-weight:800;color:var(--az);margin-bottom:12px;padding-bottom:7px;border-bottom:2px solid var(--bd);}
+.inp{border:1px solid var(--bd);border-radius:6px;padding:5px 8px;font-size:.82rem;width:100%;font-family:inherit;background:#fff;}
+.inp:focus{outline:none;border-color:var(--az2);box-shadow:0 0 0 3px rgba(37,99,235,.1);}
+.inp-l{font-size:.73rem;font-weight:600;color:var(--cz);display:block;margin-bottom:3px;}
+.bw{background:#e2e8f0;border-radius:99px;height:7px;overflow:hidden;margin-top:5px;}
+.bf{height:100%;border-radius:99px;transition:width .4s;}
+.mh{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:#fff;border-radius:var(--rd);padding:14px 18px;margin-bottom:16px;}
+.mh h2{font-size:1.1rem;font-weight:800;}
+.mh p{font-size:.8rem;opacity:.8;margin-top:2px;}
+.mkpis{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:11px;}
+@media(max-width:560px){.mkpis{grid-template-columns:1fr 1fr;}}
+.mkpi{background:rgba(255,255,255,.12);border-radius:8px;padding:9px 10px;text-align:center;}
+.mkpi-v{font-size:1.05rem;font-weight:900;}
+.mkpi-t{font-size:.65rem;opacity:.75;margin-top:1px;}
+.cop{background:#fff;border-radius:var(--rd);box-shadow:var(--sh);padding:14px;margin-bottom:14px;}
+.cop-t{font-size:.73rem;font-weight:700;color:var(--cz);text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px;}
+.cr{display:flex;gap:9px;align-items:center;margin-bottom:7px;flex-wrap:wrap;}
+.cr label{font-size:.78rem;color:var(--cz);min-width:170px;}
+.cres{background:var(--az-bg);border-radius:8px;padding:9px 13px;font-size:.82rem;margin-top:9px;display:flex;gap:16px;flex-wrap:wrap;}
+.cres span{font-weight:700;color:var(--az);}
+.cbb{display:flex;flex-direction:column;gap:5px;margin:9px 0;}
+.cbr{display:flex;align-items:center;gap:9px;font-size:.76rem;}
+.cbl{width:100px;text-align:right;color:var(--cz);flex-shrink:0;}
+.cbbg{flex:1;background:#e2e8f0;border-radius:99px;height:17px;overflow:hidden;}
+.cbar{height:100%;border-radius:99px;display:flex;align-items:center;padding-left:7px;font-size:.68rem;font-weight:700;color:#fff;}
+.cbv{width:65px;text-align:right;font-weight:700;color:var(--az);flex-shrink:0;}
+.cc{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:9px;}
+@media(max-width:560px){.cc{grid-template-columns:1fr 1fr;}}
+.cc-c{background:#fff;border-radius:10px;padding:13px;box-shadow:var(--sh);text-align:center;}
+.cc-c .nm{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--cz);margin-bottom:5px;}
+.cc-c .tx{font-size:1.2rem;font-weight:900;}
+.cc-c .sl{font-size:.78rem;color:var(--cz);margin-top:3px;}
+.cc-c.dest{border:2px solid var(--vd2);}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>📊 Planejamento Financeiro Mensal</h1>
+  <p>Thácio &amp; Byanca · Maio–Dezembro 2026</p>
+  <div class="bdgs">
+    <span class="bdg">Salário base R$ 7.310</span>
+    <span class="bdg">+ Byanca R$ 3.000</span>
+    <span class="bdg">Método semanal</span>
+    <span class="bdg">Tesouro Selic</span>
+  </div>
+</div>
+
+<div class="nav-m" id="navM">
+  <button class="on" onclick="trocarMes('mai',this)">MAI</button>
+  <button onclick="trocarMes('jun',this)">JUN</button>
+  <button onclick="trocarMes('jul',this)">JUL</button>
+  <button onclick="trocarMes('ago',this)">AGO</button>
+  <button onclick="trocarMes('set',this)">SET</button>
+  <button onclick="trocarMes('out',this)">OUT</button>
+  <button onclick="trocarMes('nov',this)">NOV</button>
+  <button onclick="trocarMes('dez',this)">DEZ</button>
+  <button onclick="trocarMes('inv',this)">📈 Invest.</button>
+</div>
+
+<div class="nav-s" id="navS">
+  <button class="on" onclick="trocarSec('resumo',this)">Resumo</button>
+  <button onclick="trocarSec('receitas',this)">Receitas</button>
+  <button onclick="trocarSec('despesas',this)">Despesas</button>
+  <button onclick="trocarSec('semanal',this)">Semanal</button>
+  <button onclick="trocarSec('parcelas',this)">Parcelas</button>
+  <button onclick="trocarSec('reserva',this)">Reserva</button>
+</div>
+
+<main id="MC"></main>
+
+<script>
+// ── CONSTANTES ──────────────────────────────────────────
+const SELIC_AA = 10.75;
+const SELIC_AM = (Math.pow(1 + SELIC_AA/100, 1/12) - 1) * 100;
+
+const FIXOS = {
+  financiamento:1795.15, condominio:360, internet:210,
+  luz:80, agua:100, planoSaude:139.97,
+  amazon:19, microsoft:45, claude:109.90, folha:1.90,
+  forum:240
+};
+
+const PARCELAS = [
+  {nome:'Computador',        valor:309.90, mr:9},
+  {nome:'Franquia',          valor:778.98, mr:3},
+  {nome:'Pós-graduação',     valor:81.06,  mr:8},
+  {nome:'CrediMóveis A',     valor:187.50, mr:4},
+  {nome:'CrediMóveis B',     valor:187.50, mr:4},
+  {nome:'CrediMóveis C',     valor:129.16, mr:2},
+  {nome:'Intercooler',       valor:292.25, mr:4},
+  {nome:'Exames Frederico',  valor:121.75, mr:5},
+  {nome:'Mr Zoo Frederico',  valor:170.00, mr:4},
+  {nome:'Frederico (T)',     valor:450.00, mr:20},
+  {nome:'Gab (roupas)',      valor:80.00,  mr:6},
+  {nome:'Gocase',            valor:122.24, mr:2},
+  {nome:'Kalunga',           valor:30.68,  mr:1},
+  {nome:'Zee Now',           valor:39.46,  mr:1},
+  {nome:'Meu remédio',       valor:64.50,  mr:1},
+  {nome:'Centauro',          valor:79.98,  mr:2},
+  {nome:'Shampoo',           valor:54.08,  mr:1},
+  {nome:'Filtro',            valor:34.20,  mr:1},
+  {nome:'Avatim',            valor:45.50,  mr:1},
+  {nome:'Liquidificador',    valor:34.03,  mr:3},
+  {nome:'Atalaia Rações',    valor:83.38,  mr:1},
+  {nome:'Cercadinho Fred.',  valor:22.71,  mr:6},
+  {nome:'Garantia carro',    valor:88.00,  mr:0},
+  {nome:'Basico',            valor:30.00,  mr:3},
+  {nome:'IPTU',              valor:198.00, mr:2},
+  {nome:'Premiere TV',       valor:29.90,  mr:2},
+  {nome:'Buscador Direito',  valor:15.00,  mr:0},
+];
+
+const MESES    = ['mai','jun','jul','ago','set','out','nov','dez'];
+const MNOMES   = ['Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+// ── STORAGE ─────────────────────────────────────────────
+let DB = {};
+try { DB = JSON.parse(localStorage.getItem('pfin26') || '{}'); } catch(e){}
+function gv(mes,k,def){ return (DB[mes]&&DB[mes][k]!==undefined)?DB[mes][k]:def; }
+function sv(mes,k,v){ if(!DB[mes])DB[mes]={}; DB[mes][k]=v; localStorage.setItem('pfin26',JSON.stringify(DB)); }
+
+// ── HELPERS ──────────────────────────────────────────────
+function fmt(v){ return 'R$ '+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function pctStr(v){ return parseFloat(v).toFixed(1)+'%'; }
+
+function parcelasDoMes(mi){
+  return PARCELAS.filter(p => p.mr >= mi);
+}
+function totalParcelasMes(mi){
+  return parcelasDoMes(mi).reduce((a,p)=>a+p.valor,0);
+}
+function totalFixosBase(){
+  return FIXOS.financiamento+FIXOS.condominio+FIXOS.internet+FIXOS.luz+FIXOS.agua+FIXOS.planoSaude+FIXOS.amazon+FIXOS.microsoft+FIXOS.claude+FIXOS.folha;
+}
+
+function rendaMes(mes){
+  const mi = MESES.indexOf(mes);
+  const sal  = parseFloat(gv(mes,'sal',  mi===0?7563.87:7310.10));
+  const byanca = parseFloat(gv(mes,'byanca',3000));
+  const sogra  = parseFloat(gv(mes,'sogra', 485));
+  const extra  = parseFloat(gv(mes,'extra', 0));
+  return {sal,byanca,sogra,extra,total:sal+byanca+sogra+extra};
+}
+function despesaMes(mes){
+  const mi = MESES.indexOf(mes);
+  const parc = totalParcelasMes(mi);
+  const fixo = totalFixosBase()+FIXOS.forum;
+  const variavel = parseFloat(gv(mes,'variavel',1800));
+  const lazer    = parseFloat(gv(mes,'lazer',400));
+  const imprev   = parseFloat(gv(mes,'imprev',0));
+  return {parc,fixo,variavel,lazer,imprev,total:parc+fixo+variavel+lazer+imprev};
+}
+function reservaMes(mes){
+  const r = rendaMes(mes);
+  return r.sal * parseFloat(gv(mes,'res_pct',1)) / 100;
+}
+function comprMes(mes){
+  const r = rendaMes(mes); const d = despesaMes(mes);
+  return (d.parc+d.fixo)/r.total*100;
+}
+
+// ── NAVEGAÇÃO ────────────────────────────────────────────
+let MES = 'mai', SEC = 'resumo';
+
+function trocarMes(mes, btn){
+  MES = mes;
+  document.querySelectorAll('.nav-m button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  const ns = document.getElementById('navS');
+  if(mes==='inv'){ ns.style.display='none'; renderInvest(); }
+  else {
+    ns.style.display='flex';
+    SEC='resumo';
+    document.querySelectorAll('.nav-s button').forEach(b=>b.classList.remove('on'));
+    document.querySelector('.nav-s button').classList.add('on');
+    render(mes,'resumo');
+  }
+}
+function trocarSec(sec,btn){
+  SEC=sec;
+  document.querySelectorAll('.nav-s button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  render(MES,sec);
+}
+function render(mes,sec){
+  const mc = document.getElementById('MC');
+  if(sec==='resumo')    mc.innerHTML = htmlResumo(mes);
+  else if(sec==='receitas')  mc.innerHTML = htmlReceitas(mes);
+  else if(sec==='despesas')  mc.innerHTML = htmlDespesas(mes);
+  else if(sec==='semanal')   mc.innerHTML = htmlSemanal(mes);
+  else if(sec==='parcelas')  mc.innerHTML = htmlParcelas(mes);
+  else if(sec==='reserva')   mc.innerHTML = htmlReserva(mes);
+}
+function atualizar(){ render(MES,SEC); }
+
+// ── RESUMO ───────────────────────────────────────────────
+function htmlResumo(mes){
+  const mi = MESES.indexOf(mes);
+  const r = rendaMes(mes), d = despesaMes(mes);
+  const saldo = r.total - d.total;
+  const comp  = comprMes(mes);
+  const corComp = comp>80?'#dc2626':comp>65?'#d97706':'#22c55e';
+  const reserva = reservaMes(mes);
+  const acabam  = PARCELAS.filter(p=>p.mr===mi);
+  const liberado = acabam.reduce((a,p)=>a+p.valor,0);
+
+  const bars = [
+    {l:'Parcelas', v:d.parc, c:'#dc2626'},
+    {l:'Fixos',    v:d.fixo, c:'#d97706'},
+    {l:'Variável', v:d.variavel, c:'#2563eb'},
+    {l:'Lazer',    v:d.lazer, c:'#7c3aed'},
+  ];
+  const tot = d.parc+d.fixo+d.variavel+d.lazer;
+  const barsH = bars.map(b=>{
+    const w = tot>0?Math.round(b.v/tot*100):0;
+    return '<div class="cbr"><div class="cbl">'+b.l+'</div><div class="cbbg"><div class="cbar" style="width:'+w+'%;background:'+b.c+'">'+w+'%</div></div><div class="cbv">'+fmt(b.v)+'</div></div>';
+  }).join('');
+
+  const alertComp = comp>80
+    ? '<div class="al crit"><div class="al-i">🚨</div><div><b>Comprometimento crítico ('+pctStr(comp)+')</b>Acima de 80% da renda em compromissos fixos. Corte variáveis.</div></div>'
+    : comp>65
+    ? '<div class="al warn"><div class="al-i">⚠️</div><div><b>Atenção ('+pctStr(comp)+')</b>Comprometimento elevado. Mantenha o método semanal rigoroso.</div></div>'
+    : '<div class="al ok"><div class="al-i">✅</div><div><b>Situação saudável ('+pctStr(comp)+')</b>Dentro da zona segura. Aumente o aporte na reserva.</div></div>';
+
+  const alertLib = liberado>0
+    ? '<div class="al ok"><div class="al-i">🎉</div><div><b>Parcelas que terminam em '+MNOMES[mi]+':</b> '+acabam.map(p=>p.nome).join(', ')+' — liberam '+fmt(liberado)+'/mês a partir do próximo mês.</div></div>'
+    : '';
+
+  return '<div class="mh"><h2>'+MNOMES[mi]+' / 2026</h2><p>Visão geral do mês</p>'
+    +'<div class="mkpis">'
+    +'<div class="mkpi"><div class="mkpi-v">'+fmt(r.total)+'</div><div class="mkpi-t">Renda total</div></div>'
+    +'<div class="mkpi"><div class="mkpi-v">'+fmt(d.total)+'</div><div class="mkpi-t">Despesas prev.</div></div>'
+    +'<div class="mkpi"><div class="mkpi-v" style="color:'+(saldo>=0?'#86efac':'#fca5a5')+'">'+fmt(saldo)+'</div><div class="mkpi-t">Saldo</div></div>'
+    +'<div class="mkpi"><div class="mkpi-v" style="color:'+corComp+'">'+pctStr(comp)+'</div><div class="mkpi-t">Comprometido</div></div>'
+    +'</div></div>'
+    +alertComp+alertLib
+    +'<div class="g3">'
+    +'<div class="card az"><div class="ct">💰 Renda total</div><div class="cv">'+fmt(r.total)+'</div><div class="cs">Thácio '+fmt(r.sal)+' + Byanca '+fmt(r.byanca)+' + Sogra '+fmt(r.sogra)+(r.extra>0?' + Extra '+fmt(r.extra):'')+'</div></div>'
+    +'<div class="card '+(comp>80?'vm':comp>65?'am':'vd')+'"><div class="ct">📊 Comprometimento</div><div class="cv" style="color:'+corComp+'">'+pctStr(comp)+'</div><div class="cs">Meta: abaixo de 60% da renda</div></div>'
+    +'<div class="card '+(saldo>=0?'vd':'vm')+'"><div class="ct">💵 Saldo previsto</div><div class="cv" style="color:'+(saldo>=0?'var(--vd)':'var(--vm)')+'">'+fmt(Math.abs(saldo))+'</div><div class="cs">'+(saldo>=0?'Sobra para reserva/investimento':'DÉFICIT — revisar gastos')+'</div></div>'
+    +'</div>'
+    +'<div class="g2">'
+    +'<div class="card vd"><div class="ct">🏦 Reserva do mês</div><div class="cv" style="color:var(--vd)">'+fmt(reserva)+'</div><div class="cs">Aporte automático Tesouro Selic · dia 20</div></div>'
+    +'<div class="card vm"><div class="ct">💳 Parcelas ativas</div><div class="cv">'+fmt(d.parc)+'</div><div class="cs">'+parcelasDoMes(mi).length+' parcelas em aberto</div></div>'
+    +'</div>'
+    +'<div class="card" style="margin-bottom:14px"><div class="ct">📊 Distribuição dos gastos</div><div class="cbb" style="margin-top:12px">'+barsH+'</div></div>'
+    +'<div class="al info"><div class="al-i">📌</div><div><b>Como usar</b> Preencha Receitas e Despesas com os valores reais ao longo do mês. A aba Semanal controla os tetos semana a semana.</div></div>';
+}
+
+// ── RECEITAS ─────────────────────────────────────────────
+function htmlReceitas(mes){
+  const mi = MESES.indexOf(mes);
+  const r = rendaMes(mes);
+  return '<div class="stit">💰 Receitas — '+MNOMES[mi]+'/2026</div>'
+    +'<div class="cop"><div class="cop-t">Valores recebidos neste mês</div>'
+    +'<div class="cr"><label>Salário líquido Thácio (R$)</label>'
+    +'<input class="inp" type="number" step="0.01" value="'+gv(mes,'sal',mi===0?7563.87:7310.10)+'" onchange="sv(\''+mes+'\',\'sal\',this.value);atualizar()" style="max-width:150px">'
+    +'<span class="mu">Base recorrente: R$ 7.310,10</span></div>'
+    +'<div class="cr"><label>Repasse Byanca (R$)</label>'
+    +'<input class="inp" type="number" step="0.01" value="'+gv(mes,'byanca',3000)+'" onchange="sv(\''+mes+'\',\'byanca\',this.value);atualizar()" style="max-width:150px">'
+    +'<span class="mu">Todas as contas no nome de Thácio</span></div>'
+    +'<div class="cr"><label>Repasse Sogra — plano saúde (R$)</label>'
+    +'<input class="inp" type="number" step="0.01" value="'+gv(mes,'sogra',485)+'" onchange="sv(\''+mes+'\',\'sogra\',this.value);atualizar()" style="max-width:150px"></div>'
+    +'<div class="cr"><label>Renda extra / bônus (R$)</label>'
+    +'<input class="inp" type="number" step="0.01" value="'+gv(mes,'extra',0)+'" onchange="sv(\''+mes+'\',\'extra\',this.value);atualizar()" style="max-width:150px"></div>'
+    +'<div class="cres">Total: <span>'+fmt(r.total)+'</span> &nbsp; Thácio: <span>'+fmt(r.sal)+'</span> &nbsp; Byanca+Sogra: <span>'+fmt(r.byanca+r.sogra)+'</span></div>'
+    +'</div>'
+    +'<div class="tw"><table><thead><tr><th>Origem</th><th>Dia</th><th class="r">Previsto</th><th class="r">Realizado</th></tr></thead><tbody>'
+    +'<tr><td><b>Salário Thácio</b><br><span class="mu">CEF</span></td><td>Dia 20</td><td class="r">'+fmt(r.sal)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rsal','')+'" onchange="sv(\''+mes+'\',\'rsal\',this.value)" style="max-width:110px"></td></tr>'
+    +'<tr><td><b>Repasse Byanca</b></td><td>Dia 7–10</td><td class="r">'+fmt(r.byanca)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rbyanca','')+'" onchange="sv(\''+mes+'\',\'rbyanca\',this.value)" style="max-width:110px"></td></tr>'
+    +'<tr><td><b>Repasse Sogra</b></td><td>Variável</td><td class="r">'+fmt(r.sogra)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rsogra','')+'" onchange="sv(\''+mes+'\',\'rsogra\',this.value)" style="max-width:110px"></td></tr>'
+    +'<tr style="background:#f8fafc"><td colspan="2"><b>TOTAL</b></td><td class="r b">'+fmt(r.total)+'</td><td></td></tr>'
+    +'</tbody></table></div>'
+    +'<div class="al info"><div class="al-i">💡</div><div><b>Dia 20</b> — transfira '+fmt(reservaMes(mes))+' para o Tesouro Selic imediatamente. Depois calcule o teto semanal na aba Semanal.</div></div>';
+}
+
+// ── DESPESAS ─────────────────────────────────────────────
+function htmlDespesas(mes){
+  const mi = MESES.indexOf(mes);
+  const r = rendaMes(mes), d = despesaMes(mes);
+  const saldo = r.total - d.total;
+  return '<div class="stit">📤 Despesas — '+MNOMES[mi]+'/2026</div>'
+    +'<div class="cop"><div class="cop-t">Gastos variáveis estimados</div>'
+    +'<div class="cr"><label>Supermercado + alimentação (R$)</label><input class="inp" type="number" step="1" value="'+gv(mes,'variavel',1800)+'" onchange="sv(\''+mes+'\',\'variavel\',this.value);atualizar()" style="max-width:140px"></div>'
+    +'<div class="cr"><label>Lazer / pessoal (R$)</label><input class="inp" type="number" step="1" value="'+gv(mes,'lazer',400)+'" onchange="sv(\''+mes+'\',\'lazer\',this.value);atualizar()" style="max-width:140px"></div>'
+    +'<div class="cr"><label>Imprevistos (R$)</label><input class="inp" type="number" step="1" value="'+gv(mes,'imprev',0)+'" onchange="sv(\''+mes+'\',\'imprev\',this.value);atualizar()" style="max-width:140px"></div>'
+    +'<div class="cres">Total despesas: <span>'+fmt(d.total)+'</span> &nbsp; Saldo: <span style="color:'+(saldo>=0?'var(--vd)':'var(--vm)')+'">'+fmt(saldo)+'</span></div>'
+    +'</div>'
+    +'<div class="tw"><table><thead><tr><th>Categoria</th><th>Tipo</th><th class="r">Previsto</th><th class="r">Realizado</th></tr></thead><tbody>'
+    +'<tr><td colspan="4" style="background:#f8fafc;font-weight:700;font-size:.72rem;color:var(--cz);text-transform:uppercase;letter-spacing:.4px">Fixos mensais</td></tr>'
+    +'<tr><td>🏠 Financiamento carro</td><td><span class="tag az">Fixo</span></td><td class="r">'+fmt(FIXOS.financiamento)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_fin','')+'" onchange="sv(\''+mes+'\',\'rd_fin\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td>🏢 Condomínio</td><td><span class="tag az">Fixo</span></td><td class="r">'+fmt(FIXOS.condominio)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_cond','')+'" onchange="sv(\''+mes+'\',\'rd_cond\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td>📡 Internet/Telefone</td><td><span class="tag az">Fixo</span></td><td class="r">'+fmt(FIXOS.internet)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_inet','')+'" onchange="sv(\''+mes+'\',\'rd_inet\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td>💡 Energia + Água</td><td><span class="tag az">Fixo</span></td><td class="r">'+fmt(FIXOS.luz+FIXOS.agua)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_enag','')+'" onchange="sv(\''+mes+'\',\'rd_enag\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td>❤️ Plano de saúde</td><td><span class="tag az">Fixo</span></td><td class="r">'+fmt(FIXOS.planoSaude)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_saude','')+'" onchange="sv(\''+mes+'\',\'rd_saude\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td>📱 Assinaturas digitais</td><td><span class="tag az">Fixo</span></td><td class="r">'+fmt(FIXOS.amazon+FIXOS.microsoft+FIXOS.claude+FIXOS.folha)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_assin','')+'" onchange="sv(\''+mes+'\',\'rd_assin\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td>🍽️ Almoço Fórum (prof.)</td><td><span class="tag a">Prof.</span></td><td class="r">'+fmt(FIXOS.forum)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_forum','')+'" onchange="sv(\''+mes+'\',\'rd_forum\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td colspan="4" style="background:#f8fafc;font-weight:700;font-size:.72rem;color:var(--cz);text-transform:uppercase;letter-spacing:.4px">Parcelas</td></tr>'
+    +'<tr><td>💳 Total parcelas ativas</td><td><span class="tag r">Parcelas</span></td><td class="r">'+fmt(d.parc)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_parc','')+'" onchange="sv(\''+mes+'\',\'rd_parc\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td colspan="4" style="background:#f8fafc;font-weight:700;font-size:.72rem;color:var(--cz);text-transform:uppercase;letter-spacing:.4px">Variáveis</td></tr>'
+    +'<tr><td>🛒 Supermercado + alimentação</td><td><span class="tag rx">Var.</span></td><td class="r">'+fmt(d.variavel)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_var','')+'" onchange="sv(\''+mes+'\',\'rd_var\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr><td>🎭 Lazer / pessoal</td><td><span class="tag rx">Var.</span></td><td class="r">'+fmt(d.lazer)+'</td><td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+gv(mes,'rd_laz','')+'" onchange="sv(\''+mes+'\',\'rd_laz\',this.value)" style="max-width:100px"></td></tr>'
+    +'<tr style="background:#f8fafc"><td colspan="2"><b>TOTAL PREVISTO</b></td><td class="r b">'+fmt(d.total)+'</td><td></td></tr>'
+    +'<tr style="background:'+(saldo>=0?'#f0fdf4':'#fef2f2')+'"><td colspan="2"><b>SALDO</b></td><td class="r b" style="color:'+(saldo>=0?'var(--vd)':'var(--vm)')+'">'+fmt(saldo)+'</td><td></td></tr>'
+    +'</tbody></table></div>';
+}
+
+// ── SEMANAL ──────────────────────────────────────────────
+function htmlSemanal(mes){
+  const mi = MESES.indexOf(mes);
+  const r = rendaMes(mes);
+  const d = despesaMes(mes);
+  const reserva = reservaMes(mes);
+  const pctR = parseFloat(gv(mes,'res_pct',1));
+  const nsem = parseInt(gv(mes,'nsem',4));
+  const isMai = mes==='mai';
+
+  // Tetos mensais editáveis
+  const tcMerc  = parseFloat(gv(mes,'tc_merc',  700));
+  const tcGas   = parseFloat(gv(mes,'tc_gas',   416));
+  const tcAlim  = parseFloat(gv(mes,'tc_alim',  400));
+  const tcFred  = parseFloat(gv(mes,'tc_fred',  270));
+  const tcCasa  = parseFloat(gv(mes,'tc_casa',  240));
+  const tpT     = parseFloat(gv(mes,'tp_t',     150));
+  const tpB     = parseFloat(gv(mes,'tp_b',     254));
+
+  const totConj = tcMerc+tcGas+tcAlim+tcFred+tcCasa;
+  const totPes  = tpT+tpB;
+
+  // Categoria configs
+  const cats = [
+    {k:'merc', l:'🛒 Supermercado/mercado',   t:tcMerc/nsem,  modo:'crédito'},
+    {k:'gas',  l:'⛽ Gasolina',               t:tcGas/nsem,   modo:'crédito'},
+    {k:'alim', l:'🍽️ Alimentação fora/delivery',t:tcAlim/nsem, modo:'crédito'},
+    {k:'fred', l:'🐾 Frederico',              t:tcFred/nsem,  modo:'débito'},
+    {k:'casa', l:'🏠 Casa / imprevistos',      t:tcCasa/nsem,  modo:'misto'},
+    {k:'pt',   l:'👤 Thácio — pessoal',       t:tpT/nsem,     modo:'débito'},
+    {k:'pb',   l:'👩 Byanca — pessoal',       t:tpB/nsem,     modo:'débito'},
+  ];
+
+  const modoTag = m => m==='crédito'?'<span class="tag az" style="font-size:.6rem">crédito</span>':m==='débito'?'<span class="tag v" style="font-size:.6rem">débito</span>':'<span class="tag c" style="font-size:.6rem">misto</span>';
+
+  // Config panel
+  const configConj = [
+    {k:'tc_merc', l:'🛒 Supermercado (R$/mês)',        def:700, modo:'crédito'},
+    {k:'tc_gas',  l:'⛽ Gasolina (R$/mês)',            def:416, modo:'crédito'},
+    {k:'tc_alim', l:'🍽️ Alimentação fora (R$/mês)',    def:400, modo:'crédito'},
+    {k:'tc_fred', l:'🐾 Frederico (R$/mês)',           def:270, modo:'débito'},
+    {k:'tc_casa', l:'🏠 Casa / imprevistos (R$/mês)',  def:240, modo:'misto'},
+  ].map(f=>'<div class="cr"><label>'+f.l+' '+modoTag(f.modo)+'</label>'
+    +'<input class="inp" type="number" step="1" value="'+gv(mes,f.k,f.def)+'"'
+    +' onchange="sv(\''+mes+'\',\''+f.k+'\',this.value);atualizar()" style="max-width:110px">'
+    +'<span class="mu">÷'+nsem+' = '+fmt(parseFloat(gv(mes,f.k,f.def))/nsem)+'/sem</span></div>').join('');
+
+  const configPes = [
+    {k:'tp_t', l:'👤 Thácio — vida pessoal (R$/mês)', def:150},
+    {k:'tp_b', l:'👩 Byanca — vida pessoal (R$/mês)', def:254},
+  ].map(f=>'<div class="cr"><label>'+f.l+'</label>'
+    +'<input class="inp" type="number" step="1" value="'+gv(mes,f.k,f.def)+'"'
+    +' onchange="sv(\''+mes+'\',\''+f.k+'\',this.value);atualizar()" style="max-width:110px">'
+    +'<span class="mu">÷'+nsem+' = '+fmt(parseFloat(gv(mes,f.k,f.def))/nsem)+'/sem</span></div>').join('');
+
+  // Banner de Maio
+  const bannerMai = isMai ? '<div class="al warn" style="margin-bottom:14px"><div class="al-i">📌</div><div>'
+    +'<b>Situação real de Maio/2026 (pré-salário dia 20)</b>'
+    +'<br>Após receber o repasse de Byanca e pagar a fatura Bradesco com os R$ 700–800 do Apple Watch, resta:'
+    +'<div style="display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap">'
+    +'<label class="inp-l" style="margin:0">Saldo débito disponível até dia 20 (R$)</label>'
+    +'<input class="inp" type="number" step="1" value="'+gv(mes,'sobra_deb',800)+'"'
+    +' onchange="sv(\''+mes+'\',\'sobra_deb\',this.value);atualizar()" style="max-width:120px">'
+    +'<span class="tag a">Só débito</span></div>'
+    +'</div></div>'
+    +'<div class="al info" style="margin-bottom:14px"><div class="al-i">🔄</div><div><b>Plano transição crédito → débito</b>'
+    +'<div style="margin-top:6px;font-size:.8rem;line-height:1.8">'
+    +'<b>Maio:</b> crédito para mercado, gasolina e restaurante. Débito só para essencial (~R$ 800).<br>'
+    +'<b>Junho:</b> migrar gasolina para débito. Manter mercado e alimentação no crédito.<br>'
+    +'<b>Julho:</b> migrar alimentação/delivery para débito.<br>'
+    +'<b>Agosto+:</b> 100% débito — cartão só para emergência.'
+    +'</div></div></div>' : '';
+
+  // Semanas
+  const semsH = Array.from({length:nsem},(_,i)=>{
+    const rows = cats.map(c=>{
+      const g = parseFloat(gv(mes,'s'+i+'_'+c.k,0));
+      const sd = c.t - g;
+      const p = c.t>0?Math.min(100,g/c.t*100):0;
+      const bc = p>90?'#dc2626':p>70?'#d97706':'#22c55e';
+      return '<tr>'
+        +'<td>'+c.l+' '+modoTag(c.modo)+'</td>'
+        +'<td class="r mu">'+fmt(c.t)+'</td>'
+        +'<td class="r"><input class="inp" type="number" step="0.01" placeholder="0,00" value="'+(g||'')+'"'
+        +' onchange="sv(\''+mes+'\',\'s'+i+'_'+c.k+'\',this.value);atualizar()" style="max-width:95px;font-size:.79rem"></td>'
+        +'<td class="r b" style="color:'+(sd>=0?'var(--vd)':'var(--vm)')+'">'+fmt(sd)+'</td>'
+        +'<td style="min-width:55px"><div class="bw" style="margin:0"><div class="bf" style="width:'+p+'%;background:'+bc+'"></div></div></td>'
+        +'</tr>';
+    }).join('');
+    const totG = cats.reduce((a,c)=>a+parseFloat(gv(mes,'s'+i+'_'+c.k,0)),0);
+    const totT = cats.reduce((a,c)=>a+c.t,0);
+    const pSem = totT>0?Math.min(100,totG/totT*100):0;
+    return '<div class="card" style="margin-bottom:13px">'
+      +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:11px">'
+      +'<div style="font-weight:800;font-size:.93rem">Semana '+(i+1)+'</div>'
+      +'<div style="display:flex;gap:7px;align-items:center">'
+      +'<span style="font-size:.76rem;color:var(--cz)">'+fmt(totG)+' / '+fmt(totT)+'</span>'
+      +'<span class="tag '+(totG>totT?'r':totG>totT*.8?'a':'v')+'">'+pSem.toFixed(0)+'%</span>'
+      +'</div></div>'
+      +'<div class="tw" style="margin-bottom:8px;box-shadow:none;border:1px solid var(--bd)">'
+      +'<table><thead><tr><th>Categoria</th><th class="r">Teto/sem</th><th class="r">Gasto real</th><th class="r">Saldo</th><th>%</th></tr></thead>'
+      +'<tbody>'+rows
+      +'<tr style="background:#f8fafc"><td colspan="2"><b>Total</b></td><td class="r b">'+fmt(totG)+'</td>'
+      +'<td class="r b" style="color:'+(totG<=totT?'var(--vd)':'var(--vm)')+'">'+fmt(totT-totG)+'</td><td></td></tr>'
+      +'</tbody></table></div>'
+      +'<div><span class="inp-l">Observação</span>'
+      +'<input class="inp" type="text" placeholder="ex: semana pesada com restaurante..." value="'+gv(mes,'s'+i+'_obs','')+'"'
+      +' onchange="sv(\''+mes+'\',\'s'+i+'_obs\',this.value)" style="font-size:.79rem"></div>'
+      +'</div>';
+  }).join('');
+
+  return '<div class="stit">📅 Tetos & Método Semanal — '+MNOMES[mi]+'/2026</div>'
+    +bannerMai
+    +'<div class="cop" style="margin-bottom:14px"><div class="cop-t">⚙️ Configuração dos tetos mensais</div>'
+    +'<div style="font-size:.71rem;font-weight:700;color:var(--cz);text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px">Gastos conjuntos do casal</div>'
+    +configConj
+    +'<div style="font-size:.71rem;font-weight:700;color:var(--cz);text-transform:uppercase;letter-spacing:.5px;margin:11px 0 7px">Vida pessoal individual</div>'
+    +configPes
+    +'<div style="font-size:.71rem;font-weight:700;color:var(--cz);text-transform:uppercase;letter-spacing:.5px;margin:11px 0 7px">Ciclo semanal</div>'
+    +'<div class="cr"><label>% reserva sobre salário Thácio</label>'
+    +'<select class="inp" style="max-width:180px" onchange="sv(\''+mes+'\',\'res_pct\',this.value);atualizar()">'
+    +[1,3,5,8,10].map(v=>'<option value="'+v+'"'+(pctR==v?' selected':'')+'>'+v+'% — '+fmt(r.sal*v/100)+'/mês</option>').join('')
+    +'</select></div>'
+    +'<div class="cr"><label>Número de semanas no mês</label>'
+    +'<select class="inp" style="max-width:130px" onchange="sv(\''+mes+'\',\'nsem\',this.value);atualizar()">'
+    +'<option value="4"'+(nsem===4?' selected':'')+'>4 semanas</option>'
+    +'<option value="5"'+(nsem===5?' selected':'')+'>5 semanas</option>'
+    +'</select></div>'
+    +'<div class="cres" style="margin-top:11px">Conjunto/mês: <span>'+fmt(totConj)+'</span> &nbsp; Pessoal/mês: <span>'+fmt(totPes)+'</span> &nbsp; Reserva: <span>'+fmt(reserva)+'</span></div>'
+    +'</div>'
+    +'<div class="al info" style="margin-bottom:14px"><div class="al-i">💡</div><div>'
+    +'<b>Lógica dos tetos</b> — Conjunto = gastos do casal (mercado, gasolina, restaurante, Fred, casa). Pessoal = cada um tem sua vida sem justificativa. O fórum (R$60/sem) está nos fixos, já descontado antes do teto.'
+    +'</div></div>'
+    +'<div class="stit">📋 Registro semanal</div>'
+    +semsH;
+}
+
+// ── PARCELAS ─────────────────────────────────────────────
+function htmlParcelas(mes){
+  const mi = MESES.indexOf(mes);
+  const ativas = parcelasDoMes(mi);
+  const total = ativas.reduce((a,p)=>a+p.valor,0);
+  const acabam = PARCELAS.filter(p=>p.mr===mi);
+  const libera = acabam.reduce((a,p)=>a+p.valor,0);
+
+  const linhas = ativas.slice().sort((a,b)=>b.valor-a.valor).map(p=>{
+    const cor = p.mr===mi?'r':p.mr===mi+1?'a':'v';
+    const status = p.mr===mi?'Último mês':p.mr===mi+1?'Próximo':'Ativa';
+    // Calcular mês de fim a partir de mr
+    const fimMi = p.mr; const fimM = fimMi < MESES.length ? MNOMES[fimMi]+'/2026' : 'Após Dez/2026';
+    return '<tr><td><b>'+p.nome+'</b></td><td class="r b">'+fmt(p.valor)+'</td><td>'+fimM+'</td><td><span class="tag '+cor+'">'+status+'</span></td></tr>';
+  }).join('');
+
+  const timeline = MESES.map((m,idx)=>{
+    const a = PARCELAS.filter(p=>p.mr===idx);
+    const v = a.reduce((s,p)=>s+p.valor,0);
+    return a.length>0?'<div class="card" style="margin-bottom:9px;border-left:4px solid var(--vd2);border-radius:8px;padding:12px 15px">'
+      +'<div style="display:flex;justify-content:space-between;align-items:center">'
+      +'<div><b>'+MNOMES[idx]+'/2026</b> — '+a.map(p=>p.nome).join(', ')+'</div>'
+      +'<span class="tag v">+ '+fmt(v)+'/mês livre</span>'
+      +'</div></div>':'';
+  }).join('');
+
+  return '<div class="stit">💳 Parcelas — '+MNOMES[mi]+'/2026</div>'
+    +'<div class="g2" style="margin-bottom:14px">'
+    +'<div class="card vm"><div class="ct">💳 Total este mês</div><div class="cv">'+fmt(total)+'</div><div class="cs">'+ativas.length+' parcelas em aberto</div></div>'
+    +'<div class="card vd"><div class="ct">✅ Terminam este mês</div><div class="cv">'+fmt(libera)+'</div><div class="cs">'+acabam.length+' parcela(s) — libera no próximo mês</div></div>'
+    +'</div>'
+    +'<div class="tw" style="margin-bottom:18px"><table><thead><tr><th>Parcela</th><th class="r">Valor/mês</th><th>Termina</th><th>Status</th></tr></thead><tbody>'+linhas+'<tr style="background:#f8fafc"><td><b>TOTAL</b></td><td class="r b">'+fmt(total)+'</td><td colspan="2"></td></tr></tbody></table></div>'
+    +'<div class="stit">📆 Calendário de quitações Mai–Dez/2026</div>'
+    +timeline
+    +'<div class="al ok" style="margin-top:13px"><div class="al-i">🎯</div><div><b>Estratégia avalanche por fluxo de caixa</b> — Priorize: Franquia (R$779) → Frederico (R$450) → Intercooler (R$292). Cada quitação vai imediatamente para a reserva, não para novos gastos.</div></div>';
+}
+
+// ── RESERVA ──────────────────────────────────────────────
+function htmlReserva(mes){
+  const mi = MESES.indexOf(mes);
+  const metaEmerg = rendaMes('mai').total * 6;
+  const saldoIni = parseFloat(gv('_','res_ini',0));
+
+  let s = saldoIni;
+  const rows = MESES.map((m,idx)=>{
+    const pct = parseFloat(gv(m,'res_pct',1));
+    const sal = parseFloat(gv(m,'sal',idx===0?7563.87:7310.10));
+    const aporte = sal*pct/100;
+    const rend = s*SELIC_AM/100;
+    s += rend+aporte;
+    const pm = (s/metaEmerg*100).toFixed(1);
+    const cor = s>=metaEmerg?'v':pm>30?'a':'r';
+    return '<tr'+(m===mes?' style="background:#eff6ff;font-weight:700"':'')+'>'+
+      '<td>'+MNOMES[idx]+'/2026'+(m===mes?' ◀':'')+' <span class="tag az" style="font-size:.6rem">'+pct+'%</span></td>'+
+      '<td class="r">'+fmt(aporte)+'</td>'+
+      '<td class="r mu">+'+fmt(rend)+'</td>'+
+      '<td class="r b">'+fmt(s)+'</td>'+
+      '<td class="r"><span class="tag '+cor+'">'+pm+'%</span></td>'+
+      '</tr>';
+  }).join('');
+
+  return '<div class="stit">🏦 Reserva de Emergência — '+MNOMES[mi]+'/2026</div>'
+    +'<div class="cop" style="margin-bottom:14px"><div class="cop-t">Saldo atual na reserva</div>'
+    +'<div class="cr"><label>Saldo atual no Tesouro Selic (R$)</label>'
+    +'<input class="inp" type="number" step="0.01" value="'+saldoIni+'"'
+    +' onchange="sv(\'_\',\'res_ini\',this.value);atualizar()" style="max-width:150px"></div>'
+    +'<div class="cres">Meta 6 meses de renda: <span>'+fmt(metaEmerg)+'</span> &nbsp; Selic: <span>'+SELIC_AA+'% a.a. / '+SELIC_AM.toFixed(3)+'% a.m.</span></div>'
+    +'</div>'
+    +'<div class="tw"><table><thead><tr><th>Mês</th><th class="r">Aporte</th><th class="r">Rendimento</th><th class="r">Saldo acumulado</th><th class="r">% da meta</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+    +'<div class="al info"><div class="al-i">🏦</div><div><b>Por que Tesouro Selic?</b> Garantia do governo federal · Liquidez D+1 · ~'+SELIC_AA+'% a.a. · Sem risco de crédito · Sem cartão associado (barreira psicológica = você não mexe à toa). Acesse pelo app do BB ou qualquer banco.</div></div>';
+}
+
+// ── INVESTIMENTOS ────────────────────────────────────────
+function renderInvest(){
+  const mc = document.getElementById('MC');
+  const metaEmerg = rendaMes('mai').total * 6;
+  const saldoIni = parseFloat(gv('_','res_ini',0));
+
+  // Projeção com reinvestimento de parcelas quitadas
+  let s = saldoIni;
+  let aporteBase = parseFloat(gv('mai','sal',7563.87)) * parseFloat(gv('mai','res_pct',1)) / 100;
+  let aporteExtra = 0;
+  const rowsPat = MESES.map((m,idx)=>{
+    if(idx>0){
+      const acabam = PARCELAS.filter(p=>p.mr===idx-1);
+      aporteExtra += acabam.reduce((a,p)=>a+p.valor,0);
+    }
+    const aporte = aporteBase + aporteExtra;
+    const rend = s*SELIC_AM/100;
+    s += rend+aporte;
+    return '<tr><td>'+MNOMES[idx]+'/2026</td><td class="r">'+fmt(aporteBase)+'</td>'
+      +'<td class="r b" style="color:'+(aporteExtra>0?'var(--vd)':'var(--cz)')+'">'+( aporteExtra>0?fmt(aporteExtra):'—')+'</td>'
+      +'<td class="r b">'+fmt(aporte)+'</td><td class="r b">'+fmt(s)+'</td></tr>';
+  }).join('');
+
+  // Comparativo rendimento
+  const base = 1000;
+  const selic12  = base * Math.pow(1+SELIC_AA/100,1) - base;
+  const cdb12    = base * Math.pow(1+11.5/100,1) - base;
+  const lci12    = base * Math.pow(1+10.5/100,1) - base;
+  const poup12   = base * (0.7 * SELIC_AA / 100);
+
+  // Calendário de liberações
+  const libs = MESES.map((m,idx)=>{
+    const a = PARCELAS.filter(p=>p.mr===idx);
+    const v = a.reduce((s,p)=>s+p.valor,0);
+    return a.length>0?'<div class="card" style="margin-bottom:9px;border-left:4px solid var(--vd2);border-radius:8px;padding:12px 15px">'
+      +'<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">'
+      +'<div><b>'+MNOMES[idx]+'/2026</b> — '+a.map(p=>p.nome).join(', ')+'</div>'
+      +'<span class="tag v">+ '+fmt(v)+'/mês livre</span>'
+      +'</div>'
+      +'<div style="background:var(--vd-bg);border-radius:6px;padding:6px 10px;margin-top:8px;font-size:.77rem;color:var(--vd)">'
+      +'Ação: redirecionar '+fmt(v)+' para o Tesouro Selic automaticamente.'
+      +'</div></div>':'';
+  }).join('');
+
+  mc.innerHTML = '<div class="mh" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)"><h2>📈 Painel de Investimentos</h2><p>Projeção Mai–Dez 2026 · Tesouro Selic '+SELIC_AA+'% a.a.</p></div>'
+    +'<div class="stit">⚖️ Comparativo de opções (R$ 1.000 por 12 meses)</div>'
+    +'<div class="cc">'
+    +'<div class="cc-c dest"><div class="nm">⭐ Tesouro Selic</div><div class="tx" style="color:var(--vd)">'+SELIC_AA+'% a.a.</div><div class="sl">+'+fmt(selic12)+' em 12 meses</div><div style="margin-top:7px"><span class="tag v">Recomendado</span></div><div style="font-size:.7rem;color:var(--cz);margin-top:5px">Garantia federal · D+1</div></div>'
+    +'<div class="cc-c"><div class="nm">CDB 110% CDI</div><div class="tx" style="color:var(--az2)">~11.5% a.a.</div><div class="sl">+'+fmt(cdb12)+' em 12 meses</div><div style="margin-top:7px"><span class="tag az">FGC 250k</span></div><div style="font-size:.7rem;color:var(--cz);margin-top:5px">Nubank/Inter · IR reg.</div></div>'
+    +'<div class="cc-c"><div class="nm">LCI/LCA</div><div class="tx" style="color:var(--rx)">~10.5% a.a.</div><div class="sl">+'+fmt(lci12)+' (isento IR)</div><div style="margin-top:7px"><span class="tag rx">Isento IR</span></div><div style="font-size:.7rem;color:var(--cz);margin-top:5px">Carência 90 dias</div></div>'
+    +'<div class="cc-c"><div class="nm">Poupança</div><div class="tx" style="color:var(--cz)">'+(0.7*SELIC_AA).toFixed(2)+'% a.a.</div><div class="sl">+'+fmt(poup12)+' em 12 meses</div><div style="margin-top:7px"><span class="tag r">Não indicado</span></div><div style="font-size:.7rem;color:var(--cz);margin-top:5px">Perde para inflação</div></div>'
+    +'</div>'
+    +'<div class="al ok"><div class="al-i">💡</div><div>Para a <b>reserva de emergência</b>, o Tesouro Selic é o ideal — liquidez imediata, sem risco. Quando a reserva atingir 6 meses de renda, migre o excedente para CDB ou LCI com prazo maior.</div></div>'
+    +'<div class="stit" style="margin-top:18px">📅 Calendário de quitações e liberações</div>'
+    +libs
+    +'<div class="stit" style="margin-top:18px">📊 Projeção de patrimônio com reinvestimento das parcelas quitadas</div>'
+    +'<div class="al info" style="margin-bottom:13px"><div class="al-i">🔮</div><div>Cada parcela que termina é redirecionada integralmente para a reserva. Sem aumentar gastos.</div></div>'
+    +'<div class="cop" style="margin-bottom:13px"><div class="cop-t">Saldo inicial na reserva</div>'
+    +'<div class="cr"><label>Saldo atual (R$)</label><input class="inp" type="number" step="0.01" value="'+saldoIni+'" onchange="sv(\'_\',\'res_ini\',this.value);renderInvest()" style="max-width:140px"></div>'
+    +'<div class="cres">Meta 6 meses: <span>'+fmt(metaEmerg)+'</span></div></div>'
+    +'<div class="tw"><table><thead><tr><th>Mês</th><th class="r">Aporte base</th><th class="r">Parcelas redireciona.</th><th class="r">Total aporte</th><th class="r">Saldo projetado</th></tr></thead><tbody>'+rowsPat+'</tbody></table></div>';
+}
+
+// ── INIT ─────────────────────────────────────────────────
+render('mai','resumo');
+</script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
